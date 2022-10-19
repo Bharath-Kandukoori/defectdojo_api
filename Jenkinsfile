@@ -35,7 +35,7 @@ pipeline {
 	stage ('Upload Reports to Defect Dojo Api') {
 		    steps {
 			sh 'pip install requests'
-			sh 'wget https://raw.githubusercontent.com/filestack/webapp/master/upload-results.py'
+			sh 'wget https://raw.githubusercontent.com/Bharath-Kandukoori/defectdojo_api/master/examples/dojo_ci_cd.py'
 			sh 'chmod +x dojo_ci_cd.py'
 			sh 'python3 dojo_ci_cd.py --product=1 --file "/tests/scans/trufflehog.xml" --scanner="Burp Scan" --high=0 --host=http://localhost:8000 --api_key=6e52c9a64436c1b808533723610f515f536d9a42 --user=admin'
 		    }
