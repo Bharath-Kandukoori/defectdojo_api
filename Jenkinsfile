@@ -29,9 +29,6 @@ pipeline {
             }
         }   
 
- 
-	 
-	    
 	stage ('Upload Reports to Defect Dojo Api') {
 		    steps {
 			sh 'pip install requests'
