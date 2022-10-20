@@ -23,13 +23,7 @@ pipeline {
 	    }
 	    }
 	    
-	    stage ('Build') {
-            steps {
-                sh 'mvn clean package'
-            }
-        }   
-
-	stage ('Upload Reports to Defect Dojo Api') {
+	 stage ('Upload Reports to Defect Dojo Api') {
 		    steps {
 			sh 'pip install requests'
 			sh 'wget https://raw.githubusercontent.com/Bharath-Kandukoori/defectdojo_api/master/examples/dojo_ci_cd.py'
